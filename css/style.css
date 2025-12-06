@@ -127,8 +127,8 @@ header.hide {
   /* Hero Section */
   .section-1-placeholder {height:100vh;}
   .section-1 {position:fixed; top:0; left:0; width:100%; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:3rem; font-weight:700; color:#fff; text-align:center; padding:0px; z-index:0; background-size:cover; background-position:center; background-repeat:no-repeat; text-shadow:1px 1px 2px rgba(0,0,0,0.6);}
-  .section-1 .btn {margin-top:30px; padding:12px 30px; font-size:1.2rem; font-weight:200; color: #ffffff; background:trasparent; border: 1px color: #ffffff;; cursor:pointer; transition: all 0.3s ease; box-shadow: 1 6px 6px rgba(0, 0, 0, 0.2);}
-  .section-1 .btn:hover {color:#ffffff; background:#000000;}
+ .section-1 .btn {margin-top:30px; padding:12px 30px; font-size:1rem; font-weight:700; text-shadow:0 3px 6px rgba(0,0,0,0.7);; color:#ffffff; background:transparent; border:2px solid rgb(255, 255, 255); cursor:pointer; transition: all 0.3s ease; box-shadow: 2 6px 6px rgba(0, 0, 0, 0.2);}
+  .section-1 .btn:hover {color:#000000; background:#ffffff; border-color: #ffffff; text-shadow: none;}
   .section1-text1 {font-size: 25px; font-weight: 200; text-shadow:0 3px 6px rgba(0,0,0,0.7);}
   .section1-text2 {font-size: 95px; font-weight: 400; text-shadow:0 3px 6px rgba(0,0,0,0.7);}
 
@@ -1526,6 +1526,7 @@ section > * {
     font-size: 2.5rem;  /* Adjust exit button size */
   }
 }
+
 
 
 
