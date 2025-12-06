@@ -48,7 +48,7 @@ header {
 /* Scrolled state: transparent + blurred */
 header.scrolled {
   background-color: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 /* Optional: hide completely */
@@ -1526,5 +1526,6 @@ section > * {
     font-size: 2.5rem;  /* Adjust exit button size */
   }
 }
+
 
 
