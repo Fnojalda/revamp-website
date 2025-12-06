@@ -729,7 +729,6 @@ section > * {
   background: black;
   color: white;
   border: none;
-  border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
@@ -762,7 +761,7 @@ section > * {
   margin: 15px 0;
 }
 
-/* WHATSAPP BUTTON ON RIGHT SIDE */
+
 .contact-info-box {
   position: relative;
 }
@@ -775,7 +774,6 @@ section > * {
   gap: 15px;
   background: #000;
   padding: 15px 25px;
-  border-radius: 12px;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1531,3 +1529,4 @@ section > * {
     font-size: 2.5rem;  /* Adjust exit button size */
   }
 }
+
