@@ -24,7 +24,7 @@ body {
 
 h2 {
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
  /* Header */
@@ -132,7 +132,7 @@ header.hide {
   /* General Sections */
   .section {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff; }
   #section3 {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff;}
-  #section2 {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff;}
+  #section2 {position:relative; width:100%; padding:60px 10px; text-align:center;}
   #section6 {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff;}
   #section5 {position:relative; width:100%; padding:50px 5px; text-align:center; background-color:#000000; color: #ffffff;}
   
@@ -266,12 +266,21 @@ section > * {
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* space between children */
+  padding: 50px 0; /* optional top/bottom padding */
 }
+
 
 #section4-h2 {
   font-size: 60px;
-  font-weight: 200;
+  font-weight: 300;
+  margin-bottom: 20px; /* space between h2 and container */
 }
+
 
 /* Fixed overlay with blur and transparency */
 #section4::before {
@@ -382,13 +391,13 @@ section > * {
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section4-label1 {position:absolute; left:373px; top:225px; max-width:30%; height:auto; color: #6e6e6e;}
-.section4-label2 {position:absolute; left:763px; top:225px; max-width:30%; height:auto; color: #6e6e6e;}
-.section4-label3 {position:absolute; right:683px; top:225px; max-width:30%; height:auto; color: #6e6e6e;}
-.section4-label4 {position:absolute; left:373px; top:305px; max-width:30%; height:auto; color: #6e6e6e;}
-.section4-label5 {position:absolute; left:765px; top:305px; max-width:30%; height:auto; color: #6e6e6e;} 
-.section4-label6 {position:absolute; right:669px; top:305px; max-width:30%; height:auto; color: #6e6e6e;}
-.section4-label7 {position:absolute; right:471px; top:305px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label1 {position:absolute; left:373px; top:275px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label2 {position:absolute; left:763px; top:275px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label3 {position:absolute; right:683px; top:275px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label4 {position:absolute; left:373px; top:355px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label5 {position:absolute; left:765px; top:355px; max-width:30%; height:auto; color: #6e6e6e;} 
+.section4-label6 {position:absolute; right:669px; top:355px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label7 {position:absolute; right:471px; top:355px; max-width:30%; height:auto; color: #6e6e6e;}
 
 /* Make 3 inputs wider (2 columns wide) */
 .wide-input {
@@ -535,6 +544,10 @@ section > * {
   top: calc(100% - 95px); 
 }
 
+.image-label-h1{ font-size: 19px; font-weight: 500;
+
+
+}
 
 /* Section 7 grid */
 .section7-grid {
@@ -561,8 +574,13 @@ section > * {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transform: translateY(-10px); 
   box-shadow: 0 12px 25px rgba(0,0,0,0.3); 
+}
+
+/* Lift container on hover */
+.section7-image:hover {
+  transform: translateY(-10px); /* move image up */
+  box-shadow: 0 18px 30px rgba(0,0,0,0.4); /* optional stronger shadow */
 }
 
 /* Image styling */
@@ -573,13 +591,14 @@ section > * {
   display: block;
 }
 
+
 /* Bottom text inside image - always visible */
 .section7-bottom-text {
   position: absolute;
   bottom: 29%; 
   left: 0;
   width: 100%;
-  background: rgba(216, 216, 216, 0.5);
+  background: rgba(255, 255, 255, 0.815);
   color: #000000;
   padding: 12px 15px;
   font-size: 16px;
@@ -597,7 +616,7 @@ section > * {
   width: 100%;
   height: auto; 
   padding: 10px 15px; 
-  background: rgba(216, 216, 216, 0.5);
+  background: rgba(255, 255, 255, 0.747);
   color: #000000;
   box-sizing: border-box;
   text-align: left;
@@ -948,6 +967,69 @@ section > * {
         }
 
 
+.section11 {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  font-family: "Palatino Linotype", "Garamond", "Georgia", serif;
+}
+
+.section11-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section11-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #222;
+}
+
+.section11-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 350px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.testimonial-role {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
 
 
 
@@ -1170,6 +1252,38 @@ section > * {
   }
 }
 
+/* Section 5 - 4 images in 1 row, shrink to fit */
+@media (max-width: 1200px) {
+  #section5 .image-grid {
+    display: flex;
+    gap: 5px;       /* small gap */
+    flex-wrap: nowrap;
+  }
+  #section5 .image-grid img {
+    width: 25%;      /* 4 images = 25% each */
+    height: auto;    /* maintain aspect ratio */
+    object-fit: contain; /* prevent cropping */
+  }
+}
+
+@media (max-width: 992px) {
+  #section5 .image-grid img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  #section5 .image-grid img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 576px) {
+  #section5 .image-grid img {
+    width: 25%;
+  }
+}
+
 /* Section 5 responsive: swipeable slider, hide buttons and thumbnails on small screens */
 @media screen and (max-width: 768px) {
 
@@ -1202,46 +1316,24 @@ section > * {
   }
 }
 
-/* Section 7 responsive: stack vertically on small screens, keep hover effect */
-@media screen and (max-width: 768px) {
-
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
   .section7-grid {
-    flex-direction: column;   
-    padding: 20px;            
-    gap: 15px;                
+    flex-direction: column; /* stack items vertically */
+    padding: 10px; /* reduce padding for smaller screens */
   }
 
   .section7-item {
-    width: 100%;              
+    width: 100%; /* full width for each item */
+    max-width: 100%; /* override any max-width */
   }
 
   .section7-image {
-    width: 100%;              
-    height: auto;             
-    min-height: 200px;        
-  }
-
-  .section7-bottom-text,
-  .image-label {
-    font-size: 14px;          
-    padding: 8px 10px;
-  }
-
-  /* Keep the hover overlay effect */
-  .image-label {
-    transform: translateY(100%); 
-    transition: transform 0.4s ease;
-  }
-
-  .section7-image:hover .image-label {
-    transform: translateY(0);  
-  }
-
-  .section7-image:hover .section7-bottom-text {
-    bottom: 50%;                
-    font-weight: 500;
+    width: 100%; /* image fills container */
+    height: auto; /* maintain aspect ratio */
   }
 }
+
 
 /* Sections 8 & 9 responsive */
 @media screen and (max-width: 992px) {
@@ -1301,5 +1393,62 @@ section > * {
 
   #section9 {
     padding: 30px 20px;
+  }
+}
+
+/* Section 11 responsiveness */
+
+/* Large screens (desktop) */
+@media (min-width: 1200px) {
+  .section11-grid {
+    gap: 30px;
+  }
+  .testimonial-card {
+    max-width: 350px;
+  }
+}
+
+/* Medium screens (tablet) */
+@media (max-width: 992px) {
+  .section11-grid {
+    gap: 20px;
+    justify-content: center;
+  }
+  .testimonial-card {
+    max-width: 45%; /* 2 per row */
+  }
+}
+
+/* Small screens (large mobile) */
+@media (max-width: 768px) {
+  .section11-grid {
+    gap: 15px;
+    justify-content: center;
+  }
+  .testimonial-card {
+    max-width: 100%; /* 1 per row */
+  }
+}
+
+/* Extra small screens (mobile) */
+@media (max-width: 480px) {
+  .section11 {
+    padding: 60px 15px;
+  }
+  .section11-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+  .testimonial-text {
+    font-size: 15px;
+  }
+  .testimonial-name {
+    font-size: 16px;
+  }
+  .testimonial-role {
+    font-size: 13px;
   }
 }
