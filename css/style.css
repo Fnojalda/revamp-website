@@ -1,0 +1,1318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+  
+  * {
+  max-width: 100%;
+}
+
+
+  html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 200;
+}
+
+ /* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 1000;
+  
+  /* Initially solid at top */
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(1px);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Scrolled state: transparent + blurred */
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+}
+
+/* Optional: hide completely */
+header.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+  
+
+  .logo-container {width:180px; height:180px; overflow:hidden;}
+  .logo-container img {width:100%; height:100%; object-fit:contain;}
+  .header-contacts {position:absolute; right:180px; display:flex; align-items:center; gap:10px;}
+
+  /* Hamburger */
+  .hamburger {position:absolute; left:200px; display:flex; align-items:center; gap:10px; cursor:pointer; z-index:1100;}
+  .hamburger .bars {display:flex; flex-direction:column; justify-content:space-between; width:17px; height:12px;}
+  .hamburger .bars div {height:2px; background:#000; border-radius:1px; transition: all 0.3s ease;}
+  .hamburger .menu-text {font-size:1rem; font-weight:600; color:#000;}
+
+  /* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(53, 53, 53, 0.3);
+
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;        
+  padding-left: 80px;          
+  transition: left 0.5s ease;
+  z-index: 1050;
+}
+
+/* When active */
+.overlay.active {
+  left: 0;
+}
+
+/* Menu container */
+.overlay .menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+/* Menu links */
+.overlay a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 17px 0px 0px 100px;
+  text-decoration: none;
+  text-align: left;
+  font-weight: 300;
+}
+
+/* Exit button */
+.overlay .exit-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+
+  /* Hero Section */
+  .section-1-placeholder {height:100vh;}
+  .section-1 {position:fixed; top:0; left:0; width:100%; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:3rem; font-weight:700; color:#fff; text-align:center; padding:0px; z-index:0; background-size:cover; background-position:center; background-repeat:no-repeat; text-shadow:1px 1px 2px rgba(0,0,0,0.6);}
+  .section-1 .btn {margin-top:30px; padding:12px 30px; font-size:1.2rem; font-weight:200; color:#000000; background:rgb(255, 255, 255); border:none; cursor:pointer; transition: all 0.3s ease; box-shadow: 1 6px 6px rgba(0, 0, 0, 0.2);}
+  .section-1 .btn:hover {color:#ffffff; background:#000000;}
+  .section1-text1 {font-size: 30px; font-weight: 200; text-shadow:0 3px 6px rgba(0,0,0,0.7);}
+  .section1-text2 {font-size: 95px; font-weight: 400; text-shadow:0 3px 6px rgba(0,0,0,0.7);}
+
+  /* General Sections */
+  .section {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff; }
+  #section3 {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff;}
+  #section2 {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff;}
+  #section6 {position:relative; width:100%; padding:60px 10px; text-align:center; background-color:#ffffff;}
+  #section5 {position:relative; width:100%; padding:50px 5px; text-align:center; background-color:#000000; color: #ffffff;}
+  
+ 
+  /* SAFE SECTION CENTERING WITHOUT CHANGING LAYOUT */
+section > * {
+  max-width: 1200px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+  /* Section 2 */
+  #section2 img {position:absolute; left:330px; top: 100px; width: 600px; height: auto; padding: 70px 70px;}
+  #section2 .text-content {position:absolute; right:100px; top: 140px; max-width:50%; text-align:left; padding: 70px 70px; color: #000000; letter-spacing: 3px; word-wrap: break-word; text-align: left;}
+
+  /* Section 3 Title */
+#section3 {
+  position: relative;
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+}
+
+.section3-header {
+  display: block;
+  margin-bottom: 60px;
+  font-size: 50px;
+  font-weight: 200;
+}
+
+/* Section 3 grid like Section 7 */
+.section3-row {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 50px;
+  flex-wrap: nowrap;
+}
+
+/* Each item: image + overlay */
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image container with hover effect */
+.section3-image {
+  position: relative;
+  width: 600px;
+  height: 322px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Lift container on hover */
+.section3-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Image styling inside container */
+.section3-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom text inside image - always visible */
+.section3-bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 10px 15px; 
+  font-size: 16px;
+  font-weight: 400; 
+  line-height: 1.4; 
+  box-sizing: border-box;
+  transition: bottom 0.4s ease, font-size 0.4s ease;
+  text-align: left;
+  display: flex;       
+  align-items: center; 
+  justify-content: flex-start; 
+  white-space: normal; 
+}
+
+/* Overlay label (appears on hover) - covers only bottom half */
+.section3-label1,
+.section3-label2,
+.section3-label3 {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 50%; 
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  transform: translateY(100%); 
+  transition: transform 0.4s ease;
+}
+
+/* On hover: overlay slides up */
+.section3-image:hover .section3-label1,
+.section3-image:hover .section3-label2,
+.section3-image:hover .section3-label3 {
+  transform: translateY(0);
+}
+
+/* On hover: bottom text moves on top of overlay text */
+.section3-image:hover .section3-bottom-text {
+  bottom: 50%; 
+  font-weight: 600; 
+}
+
+
+
+#section4 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#section4-h2 {
+  font-size: 60px;
+  font-weight: 200;
+}
+
+/* Fixed overlay with blur and transparency */
+#section4::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(94, 94, 94, 0.562); 
+  backdrop-filter: blur(1px);     
+  z-index: -1;                     
+}
+
+
+  /* Section 4: Property Search Form */
+ .property-search-container {
+  background: #fff;
+  padding: 30px 25px 40px 25px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4), 0 15px 35px rgba(0,0,0,0.05); /* soft white glow + subtle depth */
+  width: 1200px;
+  height: auto; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.section4-header{
+  font-size: 40px;
+  font-weight: 200;
+  text-align: left;
+  top: 5px;
+}
+
+.property-search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 45px 25px;
+  margin-top: 40px;
+  border: none;
+}
+
+.property-search-form select,
+.property-search-form input {
+  padding: 25px;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  background-color: #ffffff; 
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.property-search-form select:focus,
+.property-search-form input:focus {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: none;
+}
+
+.property-search-form button {
+  grid-column: span 6;
+  padding: 15px;
+  background-color: #555555;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.property-search-form button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3); 
+}
+
+#max,
+#min {
+    background-color: transparent;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    color: #000; 
+    font-weight: 600; 
+    padding: 12px;
+    outline: none;
+}
+
+/* Optional: focus effect for better visibility */
+#max:focus,
+#min:focus {
+    background-color: #fff; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border: solid 1px black;
+}
+
+
+  /* Make inputs fully responsive */
+.property-search-form select,
+.property-search-form input {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section4-label1 {position:absolute; left:373px; top:225px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label2 {position:absolute; left:763px; top:225px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label3 {position:absolute; right:683px; top:225px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label4 {position:absolute; left:373px; top:305px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label5 {position:absolute; left:765px; top:305px; max-width:30%; height:auto; color: #6e6e6e;} 
+.section4-label6 {position:absolute; right:669px; top:305px; max-width:30%; height:auto; color: #6e6e6e;}
+.section4-label7 {position:absolute; right:471px; top:305px; max-width:30%; height:auto; color: #6e6e6e;}
+
+/* Make 3 inputs wider (2 columns wide) */
+.wide-input {
+  grid-column: span 2;
+}
+
+.input-price {
+  border: solid 4px rgb(0, 0, 0);
+}
+
+
+
+
+  /* Container */
+.slider-container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* 4-image inline grid inside existing section */
+.section .image-grid {
+  display: flex;           
+  justify-content: center; 
+  gap: 130px;               
+  flex-wrap: wrap;         
+}
+
+.section .image-grid img {
+  width: 7%;              
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.section .image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .section .image-grid img {
+    width: 48%; /* 2 per row on mobile */
+  }
+}
+
+
+/* Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Slides */
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.slides img:hover {
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.thumbnails button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 10;
+  transition: background 0.3s, transform 0.3s;
+}
+
+
+
+.thumbnails button:hover {
+  background-color: transparent;
+  transform: translateY(-50%) scale(1.5);
+}
+
+/* Thumbnails */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+}
+
+.thumbnails img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnails img.active {
+  opacity: 1;
+  border: 1px solid #000000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Prev/Next button positions — keep your current values */
+.slider-container .prev {
+  position: absolute;
+  left: 30%;               
+  top: calc(100% - 95px); 
+}
+
+.slider-container .next {
+  position: absolute;
+  left: 69%;               
+  top: calc(100% - 95px); 
+}
+
+
+/* Section 7 grid */
+.section7-grid {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 50px;
+  flex-wrap: nowrap;
+}
+
+/* Each item: image + overlay + bottom text */
+.section7-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image container with hover effect */
+.section7-image {
+  position: relative;
+  width: 600px;
+  height: 322px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.section7-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Image styling */
+.section7-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom text inside image - always visible */
+.section7-bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 200;
+  box-sizing: border-box;
+  transition: bottom 0.4s ease, font-size 0.4s ease;
+  text-align: left;
+}
+
+/* Overlay label (appears on hover) - bottom half */
+.image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+/* On hover: overlay slides up */
+.section7-image:hover .image-label {
+  transform: translateY(0);
+}
+
+/* On hover: bottom text moves up on top of overlay */
+.section7-image:hover .section7-bottom-text {
+  bottom: 50%;
+  font-weight: 500;
+}
+
+
+/* Black background section */
+#section8 {
+  background: #000;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inline row */
+.social-grid {
+  display: flex;
+  gap: 75px;
+}
+
+/* Icon styling */
+.social-item i {
+  color: #fff;
+  font-size: 42px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect */
+.social-item:hover i {
+  transform: translateY(-6px);
+  opacity: 0.85;
+}
+
+#section9 {
+  background: #ffffff;
+  padding: 10px 120px;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+}
+
+.contact-wrapper {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 200;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+}
+
+.contact-form-box,
+.contact-info-box {
+  flex: 1;
+}
+
+/* FORM */
+.contact-form-box label {
+  display: block;      
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f8f8f8;
+  font-size: 15px;
+}
+
+.send-btn {
+  width: 180px;
+  padding: 12px 0;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #333;
+}
+
+.recaptcha-note {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* RIGHT SIDE INFO */
+.contact-info-box h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info-box p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.phone {
+  font-size: 23px;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+/* WHATSAPP BUTTON ON RIGHT SIDE */
+.contact-info-box {
+  position: relative;
+}
+
+.whatsapp-btn {
+  margin-top: 20px;             
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: #000;
+  padding: 15px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #222;
+}
+
+.whatsapp-btn svg {
+  width: 36px;
+  height: 36px;
+}
+
+.whatsapp-btn p {
+  margin: 0;
+  color: white;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+#section10 {
+  all: unset;              
+  display: block;
+  position: relative;
+  width: 100vw;            
+  height: 400px;           
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;       
+}
+
+/* SECTION 10: Google Map - full width */
+#section10 {
+  position: relative;
+  width: 100vw;        
+  height: 400px;       
+  margin: 0;           
+  padding: 0;
+  overflow: hidden;
+  background: #000;    
+}
+
+/* Make iframe fill the section completely */
+#section10 iframe {
+  width: 100vw !important; 
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+/* Remove max-width and centering for iframe parent */
+#section10 > * {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* FOOTER STYLES START HERE */
+
+        .footer-twotier {
+            color: var(--footer-top-text);
+        }
+
+        .footer-logo{
+          width: 400px;
+        }
+        
+        /* === TOP TIER STYLES === */
+        .footer-twotier__top {
+            background-color: var(--footer-top-bg);
+            padding: 3rem 1.5rem;
+        }
+
+        .footer-twotier__top-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 2rem;
+        }
+
+        .footer-twotier__brand p {
+            margin: 1rem 0 0 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .footer-twotier__brand .logo {
+            width: 150px;
+            fill: var(--footer-top-heading);
+        }
+
+        .footer-twotier__heading {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--footer-top-heading);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .footer-twotier__links ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .footer-twotier__links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-twotier__links a {
+            color: var(--footer-top-text);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .footer-twotier__links a:hover {
+            color: var(--footer-top-link-hover);
+            text-decoration: underline;
+        }
+
+        /* === BOTTOM TIER STYLES === */
+        .footer-twotier__bottom {
+            background-color: var(--footer-bottom-bg);
+            color: var(--footer-bottom-text);
+            padding: 1.5rem;
+        }
+        
+        .footer-twotier__bottom-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        
+        .footer-twotier__bottom a {
+            color: var(--footer-bottom-text);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .footer-twotier__bottom a:hover {
+            color: var(--footer-bottom-link-hover);
+            text-decoration: underline;
+        }
+
+        .footer-twotier__copyright {
+            margin: 0;
+        }
+        
+        .footer-twotier__social ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-twotier__social i {
+    font-size: 20px;
+    color: #ffffff; 
+    transition: color 0.3s;
+}
+
+.footer-twotier__social i:hover {
+    color: #afafaf; 
+}
+
+        
+        .footer-twotier__social a:hover {
+            text-decoration: none; 
+        }
+        
+        .footer-twotier__social svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Media query for tablets and larger */
+        @media (min-width: 768px) {
+            .footer-twotier__top-container {
+                grid-template-columns: 1.5fr 1fr 1fr; 
+                gap: 3rem;
+            }
+            .footer-twotier__bottom-container {
+                flex-direction: row; 
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+         :root {
+            --footer-top-bg: #f8f9fa;
+            --footer-top-text: #6c757d;
+            --footer-top-heading: #343a40;
+            --footer-top-link-hover: #0056b3;
+
+            --footer-bottom-bg: #000000;
+            --footer-bottom-text: #ffffff;
+            --footer-bottom-link-hover: #ffffff;
+        }
+
+
+
+
+
+/* Tablet */
+@media (max-width: 992px) {
+  .section1-text2 {
+    font-size: 65px;
+  }
+  .section1-text1 {
+    font-size: 22px;
+  }
+  .section-1 .btn {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+}
+
+/* Mobile Landscape + Small Tablets */
+@media (max-width: 768px) {
+  .section1-text2 {
+    font-size: 48px;
+  }
+  .section1-text1 {
+    font-size: 20px;
+  }
+  .section-1 {
+    padding: 0 20px;
+  }
+  .section-1 .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .section1-text2 {
+    font-size: 35px;
+    line-height: 1.1;
+  }
+  .section1-text1 {
+    font-size: 18px;
+  }
+  .section-1 {
+    padding: 0 15px;
+  }
+  .section-1 .btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Responsive Header */
+@media screen and (max-width: 1024px) {
+  .header-contacts {
+    display: none; 
+  }
+
+  .hamburger {
+    left: 20px; 
+  }
+
+  .logo-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  header {
+    height: 80px; 
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  .hamburger .menu-text {
+    font-size: 0.9rem; 
+  }
+
+  .overlay a {
+    font-size: 1.5rem; 
+  }
+}
+
+/* Section 2 Responsive */
+@media screen and (max-width: 1024px) {
+  #section2 img {
+    position: relative;  
+    left: auto;
+    top: auto;
+    display: block;
+    margin: 0 auto;      
+    width: 80%;          
+    height: auto;
+    padding: 20px 0;     
+  }
+
+  #section2 .text-content {
+    position: relative;  
+    right: auto;
+    top: auto;
+    max-width: 90%;     
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: left;
+    letter-spacing: 1.5px; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #section2 img {
+    width: 100%;          
+    padding: 10px 0;
+  }
+
+  #section2 .text-content {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .section3-row {
+    flex-direction: column; 
+    align-items: center;    
+    padding: 0 1px;        
+    gap: 5px;              
+  }
+
+  .section3-image {
+    width: 100%;            
+    max-width: 100%;        
+    height: auto;           
+  }
+
+  .section3-image img {
+    width: 100%;            
+    height: auto;          
+  }
+
+  /* Bottom text adjusts */
+  .section3-bottom-text {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Overlay label adjusts */
+  .section3-label1,
+  .section3-label2,
+  .section3-label3 {
+    height: auto;          
+    padding: 12px;
+  }
+
+  /* Keep hover effect */
+  .section3-image:hover .section3-bottom-text {
+    bottom: auto;
+  }
+}
+
+/* Section 4 responsive: labels on top, 1 input per line on small screens */
+@media screen and (max-width: 768px) {
+
+  .property-search-container {
+    width: 90%;             
+    padding: 20px 15px;     
+  }
+
+  .section4-header {
+    font-size: 28px;        
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .property-search-form {
+    display: flex;
+    flex-direction: column;  
+    gap: 15px;               
+    margin-top: 20px;
+  }
+
+  /* Make labels appear on top of inputs */
+  .property-search-form label {
+    display: block;
+    margin-bottom: 5px;     
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .property-search-form input,
+  .property-search-form select,
+  .property-search-form button {
+    width: 100%;             
+    box-sizing: border-box;  
+    grid-column: auto;      
+  }
+
+  /* Ensure previous absolute labels stack above inputs */
+  .section4-label1,
+  .section4-label2,
+  .section4-label3,
+  .section4-label4,
+  .section4-label5,
+  .section4-label6,
+  .section4-label7 {
+    position: static;
+    max-width: 100%;
+    margin-bottom: 5px;
+    color: #6e6e6e;
+  }
+}
+
+/* Section 5 responsive: swipeable slider, hide buttons and thumbnails on small screens */
+@media screen and (max-width: 768px) {
+
+  /* Make slider overflow scrollable horizontally for swipe */
+  .slider {
+    overflow-x: auto;
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  /* Slides stay in a single row */
+  .slides {
+    flex-wrap: nowrap;
+  }
+
+  .slides img {
+    width: 90%;       
+    margin-right: 10px; 
+  }
+
+  /* Hide prev/next buttons */
+  .slider-container .prev,
+  .slider-container .next {
+    display: none;
+  }
+
+  /* Hide thumbnails */
+  .thumbnails {
+    display: none;
+  }
+}
+
+/* Section 7 responsive: stack vertically on small screens, keep hover effect */
+@media screen and (max-width: 768px) {
+
+  .section7-grid {
+    flex-direction: column;   
+    padding: 20px;            
+    gap: 15px;                
+  }
+
+  .section7-item {
+    width: 100%;              
+  }
+
+  .section7-image {
+    width: 100%;              
+    height: auto;             
+    min-height: 200px;        
+  }
+
+  .section7-bottom-text,
+  .image-label {
+    font-size: 14px;          
+    padding: 8px 10px;
+  }
+
+  /* Keep the hover overlay effect */
+  .image-label {
+    transform: translateY(100%); 
+    transition: transform 0.4s ease;
+  }
+
+  .section7-image:hover .image-label {
+    transform: translateY(0);  
+  }
+
+  .section7-image:hover .section7-bottom-text {
+    bottom: 50%;                
+    font-weight: 500;
+  }
+}
+
+/* Sections 8 & 9 responsive */
+@media screen and (max-width: 992px) {
+  
+  /* Section 8 - social icons row */
+  .social-grid {
+    gap: 40px;          
+  }
+  
+  .social-item i {
+    font-size: 32px;    
+  }
+
+  /* Section 9 - contact form and info row */
+  .contact-grid {
+    gap: 40px;           
+    flex-wrap: wrap;     
+  }
+
+  .contact-form-box,
+  .contact-info-box {
+    flex: 1 1 45%;       
+  }
+
+  .contact-title {
+    font-size: 36px;     
+    margin-bottom: 30px;
+  }
+
+  #section9 {
+    padding: 50px 40px;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social-grid {
+    gap: 25px;
+  }
+
+  .social-item i {
+    font-size: 28px;
+  }
+
+  .contact-grid {
+    gap: 25px;
+  }
+
+  .contact-form-box,
+  .contact-info-box {
+    flex: 1 1 100%;      
+  }
+
+  .contact-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #section9 {
+    padding: 30px 20px;
+  }
+}

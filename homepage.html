@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <div class="hamburger" id="hamburger">
+    <div class="bars"><div></div><div></div><div></div></div>
+    <span class="menu-text">Menu</span>
+  </div>
+  <div class="logo-container"><img src="images/logo.png" alt="Logo"></div>
+  <div class="header-contacts"><span>Contact Us&nbsp;&nbsp;&nbsp;</span><span>206-919-6886</span></div>
+</header>
+
+<div class="overlay" id="overlay">
+  <div class="exit-btn" id="exitBtn">&times;</div>
+  <div class="menu-container">
+    <a href="#">Home</a>
+    <a href="#">Listings</a>
+    <a href="#">Properties</a>
+    <a href="#">Let's Move</a>
+    <a href="#">About Us</a>
+    <a href="#">Contacts</a>
+    <a href="#">Testimonials</a>
+  </div>
+</div>
+
+<div class="section-1-placeholder"></div>
+
+<section class="section-1" style="background-image: url('images/bg.jpg');">
+  <span class="section1-text1">MARCI METZGER - THE RIDGE REALTY GROUP</span>
+  <span class="section1-text2">Pahrump Realtor</span>
+  <button class="btn">CONNECT WITH MARCI METZGER</button>
+</section>
+
+<div id="sections-container">
+  <!-- Section 2 -->
+  <section class="section" id="section2">
+    <img src="images/marci.png" alt="marci">
+    <div class="text-content">
+      <p style="font-size:50px; font-weight: 200;">MARCI METZGER</p><br>
+      <p style="font-size:17px; text-align: justify;" class="section2-detail">
+        <h1 style="font-size:19px; font-weight: 500;">30 years of experience in the real estate industry,</h1><br>
+        Marci Metzger has built a reputation for excellence, integrity, and personalized service. Known for her deep knowledge of the local market and commitment to client satisfaction, she helps buyers and sellers navigate every step of the property process with confidence and ease. Whether you’re looking for your dream home or aiming to sell efficiently, Marci is dedicated to delivering results that exceed expectations.
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- Section 3 -->
+<section class="section" id="section3">
+  <h2>GET IT SOLD</h2>
+  <div class="section3-row">
+    <div class="image-box">
+      <div class="section3-image">
+        <img src="images/section3_image1.png" alt="section3_image1">
+        <div class="section3-bottom-text">Top Residential Sales Last 5 Years</div>
+        <div class="section3-label1">
+          We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year.
+        </div>
+      </div>
+    </div>
+    <div class="image-box">
+      <div class="section3-image">
+        <img src="images/section3_image2.png" alt="section3_image2">
+        <div class="section3-bottom-text">Don't Just List it... Get it SOLD!</div>
+        <div class="section3-label2">
+          We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, getting you top dollar for your home.
+        </div>
+      </div>
+    </div>
+    <div class="image-box">
+      <div class="section3-image">
+        <img src="images/section3_image3.png" alt="section3_image3">
+        <div class="section3-bottom-text">Guide to Buyers</div>
+        <div class="section3-label3">
+          Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, & more!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 -->
+<section class="section" id="section4" style="background-image: url('images/section4_bg.png');">
+  <span id="section4-h2">Find Your Dream Home</span>
+  <div class="property-search-container">
+    <h2 class="section4-header">Search Listings</h2>
+    <form class="property-search-form">
+      <label for="location" class="section4-label1">Location</label>
+      <select name="location" class="wide-input" id="location">
+        <option value="" style="font-size: small;">Location</option>
+        <option value="pahrump">Pahrump</option>
+        <option value="lasvegas">Las Vegas</option>
+        <option value="reno">Reno</option>
+      </select>
+
+      <label for="type" class="section4-label2">Type</label>
+      <select name="type" class="wide-input" id="type">
+        <option value="">Type</option>
+        <option value="house">House</option>
+        <option value="apartment">Apartment</option>
+        <option value="land">Land</option>
+      </select>
+
+      <label for="sort" class="section4-label3">Sort By</label>
+      <select name="sort" class="wide-input" id="sort">
+        <option value="">Sort By</option>
+        <option value="price_asc">Price Low → High</option>
+        <option value="price_desc">Price High → Low</option>
+        <option value="newest">Newest Listings</option>
+      </select>
+
+      <label for="bedroom" class="section4-label4">Bedrooms</label>
+      <select name="bedrooms" class="wide-input" id="bedroom">
+        <option value="">Bedrooms</option>
+        <option value="1">1+</option>
+        <option value="2">2+</option>
+        <option value="3">3+</option>
+        <option value="4">4+</option>
+      </select>
+
+      <label for="baths" class="section4-label5">Baths</label>
+      <select name="baths" class="wide-input" id="baths">
+        <option value="">Baths</option>
+        <option value="1">1+</option>
+        <option value="2">2+</option>
+        <option value="3">3+</option>
+        <option value="4">4+</option>
+      </select>
+
+      <label for="min" class="section4-label6">Min Price</label>
+      <input type="number" name="min_price" class="input-price" id="min">
+
+      <label for="max" class="section4-label7">Max Price</label>
+      <input type="number" name="max_price" class="input-price" id="max">
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+<!-- Section 5 -->
+<section class="section" id="section5">
+  <div class="image-grid">
+    <img src="images/ridge.png" alt="Image 1">
+    <img src="images/eh.png" alt="Image 2">
+    <img src="images/realtor.png" alt="Image 3">
+    <img src="images/pv.png" alt="Image 4">
+  </div>
+</section>
+
+<!-- Section 6 -->
+<section class="section" id="section6">
+  <h2>Photo Gallery</h2>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slides">
+        <img src="images/slide1.png" alt="Slide 1">
+        <img src="images/slide2.png" alt="Slide 2">
+        <img src="images/slide3.png" alt="Slide 3">
+        <img src="images/slide4.png" alt="Slide 4">
+        <img src="images/slide5.png" alt="Slide 5">
+        <img src="images/slide6.png" alt="Slide 6">
+        <img src="images/slide7.png" alt="Slide 7">
+      </div>
+    </div>
+    <div class="thumbnails">
+      <button class="prev">&#10094;</button>
+      <img src="images/slide1.png" alt="Slide 1">
+      <img src="images/slide2.png" alt="Slide 2">
+      <img src="images/slide3.png" alt="Slide 3">
+      <img src="images/slide4.png" alt="Slide 4">
+      <img src="images/slide5.png" alt="Slide 5">
+      <img src="images/slide6.png" alt="Slide 6">
+      <img src="images/slide7.png" alt="Slide 7">
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7 -->
+<section class="section" id="section7">
+  <h2>Our Services</h2>
+  <div class="section7-grid">
+    <div class="section7-item">
+      <div class="section7-image">
+        <img src="images/section7-image1.png" alt="Image 1">
+        <div class="image-label">
+          <span>Nervous about your property adventure? Don’t be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!</span>
+        </div>
+        <div class="section7-bottom-text">Real Estate Done Right</div>
+      </div>
+    </div>
+    <div class="section7-item">
+      <div class="section7-image">
+        <img src="images/section7-image2.png" alt="Image 2">
+        <div class="image-label">
+          <span>Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. Happy to help you find where to put your hard-earned dollars.</span>
+        </div>
+        <div class="section7-bottom-text">Commercial & Residential</div>
+      </div>
+    </div>
+    <div class="section7-item">
+      <div class="section7-image">
+        <img src="images/section7-image3.png" alt="Image 3">
+        <div class="image-label">
+          <span>If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.</span>
+        </div>
+        <div class="section7-bottom-text">Rely on Expertise</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8 -->
+<section class="section" id="section8">
+  <div class="social-grid">
+    <a href="#" class="social-item">
+      <svg width="42" height="42" viewBox="0 0 512 512" fill="white">
+        <circle cx="256" cy="256" r="256"/>
+        <path d="M354 165h-48c-8 0-18 10-18 22v36h66l-10 68h-56v181h-74V291h-55v-68h55v-45c0-48 34-92 94-92 26 0 45 2 46 2v57z" fill="black"/>
+      </svg>
+    </a>
+    <a href="#" class="social-item">
+      <svg width="42" height="42" viewBox="0 0 512 512" fill="white">
+        <path d="M349.33 69.33H162.67A93.42 93.42 0 0069.33 162.67v186.66A93.42 93.42 0 00162.67 442.67h186.66A93.42 93.42 0 00442.67 349.33V162.67A93.42 93.42 0 00349.33 69.33zm-93.33 298.67a106.67 106.67 0 11106.67-106.67 106.81 106.81 0 01-106.67 106.67zm110.67-193.33a25.33 25.33 0 1125.33-25.34 25.28 25.28 0 01-25.33 25.34z"/>
+        <circle cx="256" cy="256" r="80"/>
+      </svg>
+    </a>
+    <a href="#" class="social-item">
+      <svg width="42" height="42" viewBox="0 0 448 512" fill="white">
+        <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.8 53.8 0 11107.59 0c0 29.7-24.09 54.3-53.8 54.3zM447.9 448h-92.1V302.4c0-34.7-.7-79.2-48.29-79.2-48.3 0-55.7 37.7-55.7 76.6V448h-92.1V148.9h88.4v40.7h1.3c12.3-23.2 42.3-48.3 87.1-48.3 93.1 0 110.3 61.3 110.3 140.8z"/>
+      </svg>
+    </a>
+    <a href="#" class="social-item">
+      <svg width="42" height="42" viewBox="0 0 512 512" fill="white">
+        <path d="M285.8 356.4l-54-82 54-82c9-14 32.1-4.7 28.7 12.1l-12.6 70.4 12.6 70.4c3.4 16.8-19.7 26.1-28.7 11.1zm-101.2 41l21-93.8-21-93.8c-3.7-16.5-28.7-16.5-32.4 0l-21 93.8 21 93.8c3.7 16.4 28.7 16.4 32.4 0zm209.7-133.8l-93.8-21-93.8 21c-16.5 3.7-16.5 28.7 0 32.4l93.8 21 93.8-21c16.4-3.7 16.4-28.7 0-32.4zM237.4 83.1l-21 93.8 21 93.8c3.7 16.5 28.7 16.5 32.4 0l21-93.8-21-93.8c-3.7-16.4-28.7-16.4-32.4 0zm151.3 63.4l-70.4 12.6-70.4-12.6c-16.8-3.4-26.1 19.7-11.1 28.7l82 54 82-54c14-9 4.7-32.1-12.1-28.7z"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Section 9 -->
+<section class="section" id="section9">
+  <div class="contact-wrapper">
+    <h2 class="contact-title">Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-form-box">
+        <h3>Send Message</h3>
+        <form>
+          <label>Name</label>
+          <input type="text" placeholder="Enter your name">
+          <label>Email*</label>
+          <input type="email" placeholder="Enter your email" required>
+          <label>Message</label>
+          <textarea placeholder="Type your message..."></textarea>
+          <button type="submit" class="send-btn">Send</button>
+          <p class="recaptcha-note">
+            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+          </p>
+        </form>
+      </div>
+      <div class="contact-info-box">
+        <h3>Call or Visit</h3>
+        <p>3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
+        <p class="phone">(206) 919-6886</p>
+        <h4>Office Hours</h4>
+        <p><strong>Open today</strong><br>08:00 am – 07:00 pm</p>
+        <p><strong>Open daily</strong><br>8:00 am – 7:00 pm</p>
+        <p>Appointments outside office hours available upon request. Just call!</p>
+        <div class="whatsapp-btn">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFFFFF" d="M16.001 3.2c-6.999 0-12.8 5.801-12.8 12.8 0 2.258.589 4.455 1.708 6.385L3.2 28.8l6.58-1.708A12.726 12.726 0 0 0 16 28.8c6.999 0 12.8-5.801 12.8-12.8S23 3.2 16.001 3.2zm0 23.04c-2.106 0-4.155-.56-5.94-1.626l-.425-.251-3.905 1.013 1.04-3.8-.276-.44A10.64 10.64 0 0 1 5.36 16c0-5.889 4.783-10.64 10.64-10.64S26.64 10.111 26.64 16c0 5.857-4.752 10.64-10.64 10.64zm6.098-8.003c-.334-.167-1.973-.974-2.281-1.085-.307-.112-.534-.167-.76.167-.226.334-.867 1.085-1.066 1.308-.2.223-.387.25-.72.083-.334-.167-1.41-.52-2.686-1.66-1-.893-1.677-1.995-1.873-2.329-.2-.334-.022-.514.145-.68.149-.148.334-.387.5-.58.167-.194.223-.334.334-.557.112-.223.056-.418-.028-.585-.083-.167-.76-1.84-1.04-2.514-.275-.66-.557-.568-.76-.568-.195-.017-.418-.017-.642-.017-.223 0-.585.083-.892.418-.307.334-1.171 1.144-1.171 2.788 0 1.645 1.2 3.234 1.367 3.458.167.223 2.355 3.6 5.702 5.034.798.344 1.42.55 1.904.705.8.255 1.528.22 2.105.134.643-.095 1.973-.807 2.251-1.588.277-.78.277-1.452.194-1.588-.084-.139-.31-.223-.643-.39z"/>
+          </svg>
+          <div>
+            <p><strong>Message us on WhatsApp</strong></p>
+            <p>Marci Metzger - THE RIDGE REALTY GROUP</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10 -->
+<section class="section" id="section10">
+  <iframe
+    src="https://www.google.com/maps?q=3190+NV-160+Suite+F,+Pahrump,+NV+89048,+USA&output=embed"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<footer class="footer-twotier" role="contentinfo">
+  <div class="footer-twotier__top">
+    <div class="footer-twotier__top-container">
+      <div class="footer-twotier__brand">
+        <div class="logo">
+          <img src="images/logo.png" class="footer-logo">
+        </div>
+        <p>With Marci Metzger, your real estate journey is guided by expertise, integrity, and a commitment to results.</p>
+      </div>
+      <div class="footer-twotier__links">
+        <h3 class="footer-twotier__heading">Contact Us</h3>
+        <ul>
+          <li><a href="#">(206) 919-6886</a></li>
+          <li><a href="#">marci@info.com</a></li>
+          <li><a href="#">3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</a></li>
+        </ul>
+      </div>
+      <div class="footer-twotier__links">
+        <h3 class="footer-twotier__heading">Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-twotier__bottom">
+    <div class="footer-twotier__bottom-container">
+      <p class="footer-twotier__copyright">
+        &copy; Copyright © 2023 Marci METZGER Homes - All Rights Reserved
+      </p>
+      <nav class="footer-twotier__social" aria-label="Social Media">
+        <ul>
+          <li><a href="#" aria-label="Our Facebook Profile"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" aria-label="Our Twitter Profile"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" aria-label="Our LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#" aria-label="Our Yelp Profile"><i class="fab fa-yelp"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
